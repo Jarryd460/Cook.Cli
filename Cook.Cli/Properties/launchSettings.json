@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Cook.Cli Development": {
+      "commandName": "Project",
+      "commandLineArgs": "breakfast Meal \"Protein shake\"",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "Cook.Cli Production": {
+      "commandName": "Project",
+      "commandLineArgs": "breakfast -m \"steak\"",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Production"
+      }
+    }
+  }
+}
