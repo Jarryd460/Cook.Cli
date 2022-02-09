@@ -52,6 +52,8 @@ namespace Cook.Cli
 
             var parser = new CommandLineBuilder(command)
                 .UseHost(_ => Host.CreateDefaultBuilder(args), SetupHost)
+                // Internally calls .RegisterWithDotnetSuggest() and .UseSuggestDirective() which is required to work with dotnet suggest when
+                // tool is not installed globally
                 .UseDefaults()
                 .UseHelp(CustomizeHelp)
                 .UseExceptionHandler(ExceptionHandler)
